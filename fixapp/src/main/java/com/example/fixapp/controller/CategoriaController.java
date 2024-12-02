@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.ArrayList;
 
 @RestController
+@RequestMapping("/api")
 public class CategoriaController {
 
     private static final List<Map<String, String>> categorias = new ArrayList<>(Arrays.asList(
@@ -16,13 +17,13 @@ public class CategoriaController {
     ));
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/api/categorias")
+    @GetMapping("/categorias")
     public List<Map<String, String>> getCategorias() {
         return categorias;
     }
 
     @CrossOrigin(origins = "*")
-    @PostMapping("/api/add/categoria")
+    @PostMapping("/add/categoria")
     public Map<String, String> addCategoria(@RequestBody Map<String, String> categoria) {
         categorias.add(categoria);
         return categoria; 

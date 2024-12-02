@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.ArrayList;
 
 @RestController
+@RequestMapping("/api")
 public class FavoritoController {
 
     private static final List<Map<String, String>> favoritos = new ArrayList<>(Arrays.asList(
@@ -16,13 +17,13 @@ public class FavoritoController {
     ));
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/api/favoritos")
+    @GetMapping("/favoritos")
     public List<Map<String, String>> getFavoritos() {
         return favoritos;
     }
 
     @CrossOrigin(origins = "*")
-    @PostMapping("/api/add/favorito")
+    @PostMapping("/add/favorito")
     public Map<String, String> addFavorito(@RequestBody Map<String, String> favorito) {
         favoritos.add(favorito);
         return favorito; 

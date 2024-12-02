@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.ArrayList;
 
 @RestController
+@RequestMapping("/api")
 public class ProfissionalController {
 
     private static final List<Map<String, String>> profissionais = new ArrayList<>(Arrays.asList(
@@ -15,13 +16,13 @@ public class ProfissionalController {
     ));
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/api/profissionais")
+    @GetMapping("/profissionais")
     public List<Map<String, String>> getProfissionais() {
         return profissionais;
     }
 
     @CrossOrigin(origins = "*")
-    @PostMapping("/api/addprofissional")
+    @PostMapping("/addprofissional")
     public Map<String, String> addProfissional(@RequestBody Map<String, String> profissional) {
         profissionais.add(profissional);
         return profissional;  
