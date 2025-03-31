@@ -12,6 +12,9 @@ public class ProfissionalController {
 
     private static final List<Map<String, String>> profissionais = new ArrayList<>(Arrays.asList(
             Map.of("name", "Profissional 1", "imageUrl", "https://encurtador.com.br/HSSy5"),
+            Map.of("name", "Profissional 1", "imageUrl", "https://encurtador.com.br/HSSy5"),
+            Map.of("name", "Profissional 1", "imageUrl", "https://encurtador.com.br/HSSy5"),
+            Map.of("name", "Profissional 1", "imageUrl", "https://encurtador.com.br/HSSy5"),
             Map.of("name", "Profissional 2", "imageUrl", "https://encurtador.com.br/HSSy5")
     ));
 
